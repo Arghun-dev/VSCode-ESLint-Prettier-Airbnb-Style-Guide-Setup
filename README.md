@@ -113,3 +113,14 @@ Open a terminal to the root of your project, and run the following command:
 `$. npx eslint . --ext .js,.jsx,.ts,.tsx`
 
 ESLint will lint all .js, .jsx, .ts, and .tsx files within the current folder, and output results to your terminal.
+
+```js
+module.exports = {
+  extends: [
+    'airbnb-typescript',
+    'airbnb/hooks',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/recommended-requiring-type-checking',
+  ],
+};
+```
