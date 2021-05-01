@@ -31,3 +31,14 @@ eslintrc.json
   }
 }
 ```
+
+and finally to autoSave Eslint rules: create a folder called `.vscode` in the root folder and inside of it create a file called `settings.json`:
+
+```js
+{
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "eslint.validate": ["javascript"]
+}
+```
