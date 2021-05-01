@@ -1,5 +1,7 @@
 # VSCode-ESLint-Prettier-Airbnb-Style-Guide-Setup-And-Typescript
 
+`$. npm i -g eslint typescript`
+
 **First install `ESlint` and `Prettier` extensions on your vscode**
 
 **Set Format onSave**
