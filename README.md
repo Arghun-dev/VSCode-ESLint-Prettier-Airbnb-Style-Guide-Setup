@@ -9,7 +9,8 @@
 Before Creating React App Do this: 
 
 1. `$. npm iniy -y`
-2. `$. npm i -D eslint prettier eslint-plugin-prettier eslint-config-prettier eslint-plugin-react eslint-config-react eslint-plugin-react-hooks`
+2. change the main in the `index.js` to `index.ts` in `package.json`
+3. `$. npm i -D eslint prettier eslint-plugin-prettier eslint-config-prettier eslint-plugin-react eslint-config-react eslint-plugin-react-hooks`
 
 Now Add `airbnb` style guide
 
