@@ -51,12 +51,94 @@ and finally to autoSave Eslint rules: create a folder called `.vscode` in the ro
 
 ## Install
 
+`$. yarn create react-app app --template typescript`
+
+## NPM Packages
+
+1. @typescript-eslint/eslint-plugin
+2. @typescript-eslint/parser
+3. eslint-config-airbnb-typescript
+4. eslint-config-prettier
+5. eslint-plugin-import (Airbnb peer)
+6. eslint-plugin-jest
+7. eslint-plugin-jsx-a11y (Airbnb peer)
+8. eslint-plugin-prettier
+9. eslint-plugin-react (Airbnb peer)
+10. eslint-plugin-react-hooks (Airbnb peer)
+11. prettier
+
+We’ll be adding the following packages:
+
 `$. npm install typescript eslint prettier eslint-config-airbnb-typescript-prettier --save-dev`
 
-in eslintrc:
+## Install ESlint
 
-`$. extends: "airbnb-typescript-prettier"`
+Install the ESLint packages for TypeScript and Jest support. Note, ESLint is installed with create-react-app, so you don’t need to explicitly install it.
 
+`$. yarn add -D @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-airbnb-typescript eslint-plugin-jest`
+
+Then install the packages for Airbnb config. This command will work for Yarn or NPM.
+
+`$. npx install-peerdeps --dev eslint-config-airbnb`
+
+## Prettier
+
+`$. yarn add -D prettier eslint-config-prettier eslint-plugin-prettier`
+
+## ESLint Config
+
+The ESLint config will look something like this:
+
+```js
+module.exports = {
+  extends: [
+    'airbnb-typescript',
+    'airbnb/hooks',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:jest/recommended',
+    'plugin:prettier/recommended'
+  ],
+  plugins: ['react', '@typescript-eslint', 'jest'],
+  env: {
+    browser: true,
+    es6: true,
+    jest: true,
+  },
+  globals: {
+    Atomics: 'readonly',
+    SharedArrayBuffer: 'readonly',
+  },
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+    ecmaVersion: 2018,
+    sourceType: 'module',
+    project: './tsconfig.json',
+  },
+  rules: {
+    'linebreak-style': 'off',
+    'prettier/prettier': [
+      'error',
+      {
+        endOfLine: 'auto',
+      },
+    ],
+  },
+};
+```
+
+## Scripts
+
+Lint and format with these scripts:
+
+```js
+"scripts": {
+  "format": "prettier --write src/**/*.ts{,x}",
+  "lint": "tsc --noEmit && eslint src/**/*.ts{,x}"
+}
+```
 
 ## Install Eslint Plugins
 
