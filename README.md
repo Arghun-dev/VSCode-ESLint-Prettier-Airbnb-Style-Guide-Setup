@@ -45,3 +45,71 @@ and finally to autoSave Eslint rules: create a folder called `.vscode` in the ro
     "eslint.validate": ["javascript"]
 }
 ```
+
+
+# Typescript => Eslint-Prettier-airbnb-config
+
+## Install
+
+`$. npm install typescript eslint prettier eslint-config-airbnb-typescript-prettier --save-dev`
+
+in eslintrc:
+
+`$. extends: "airbnb-typescript-prettier"`
+
+
+## Install Eslint Plugins
+
+`$. npm install eslint-plugin-import@^2.22.0 \
+            eslint-plugin-jsx-a11y@^6.3.1 \
+            eslint-plugin-react@^7.20.3 \
+            eslint-plugin-react-hooks@^4.0.8 \
+            @typescript-eslint/eslint-plugin@^4.4.1 \
+            --save-dev`
+            
+## If you don't need React Support
+
+`$. npm install eslint-plugin-import@^2.22.0 \
+            @typescript-eslint/eslint-plugin@^4.4.1 \
+            --save-dev`
+            
+ 
+ ## Configure Eslint
+ 
+ Add "extends": "airbnb-typescript" to your ESLint config file.
+
+If you don't need React support, add "extends": "airbnb-typescript/base" instead.
+
+An example .eslintrc.js:
+
+```js
+module.exports = {
+  extends: ['airbnb-typescript'],
+};
+```
+
+
+## Configure the ESLint TypeScript parser
+
+This config requires knowledge of your TypeScript config.
+
+In your ESLint config, set parserOptions.project to the path of your tsconfig.json.
+
+For example:
+
+```js
+module.exports = {
+   extends: ['airbnb-typescript'],
++  parserOptions: {
++    project: './tsconfig.json',
++  }
+ };
+```
+
+## Run ESLint
+
+Open a terminal to the root of your project, and run the following command:
+
+`$. npx eslint . --ext .js,.jsx,.ts,.tsx`
+
+ESLint will lint all .js, .jsx, .ts, and .tsx files within the current folder, and output results to your terminal.
