@@ -75,6 +75,15 @@ We’ll be adding the following packages:
 
 Install the ESLint packages for TypeScript and Jest support. Note, ESLint is installed with create-react-app, so you don’t need to explicitly install it.
 
+`$. npm install eslint-config-airbnb-typescript --save-dev`
+
+`$. npm install eslint-plugin-import@^2.22.0 \
+            eslint-plugin-jsx-a11y@^6.3.1 \
+            eslint-plugin-react@^7.20.3 \
+            eslint-plugin-react-hooks@^4.0.8 \
+            @typescript-eslint/eslint-plugin@^4.4.1 \
+            --save-dev`
+
 `$. yarn add -D @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-airbnb-typescript eslint-plugin-jest`
 
 Then install the packages for Airbnb config. This command will work for Yarn or NPM.
