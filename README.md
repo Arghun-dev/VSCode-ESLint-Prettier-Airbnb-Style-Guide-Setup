@@ -15,3 +15,9 @@
 `$. npm install --save-dev @typescript-eslint/parser eslint-config-prettier eslint-plugin-prettier`
 
 <hr />
+
+## eslintrc.js
+
+```js
+
+```
