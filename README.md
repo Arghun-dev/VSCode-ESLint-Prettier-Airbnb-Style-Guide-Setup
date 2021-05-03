@@ -9,3 +9,9 @@
 `$. npm install eslint-plugin-jest @typescript-eslint/eslint-plugin --save-dev`
 
 <hr />
+
+## Install Prettier dependencies
+
+`$. npm install --save-dev @typescript-eslint/parser eslint-config-prettier eslint-plugin-prettier`
+
+<hr />
