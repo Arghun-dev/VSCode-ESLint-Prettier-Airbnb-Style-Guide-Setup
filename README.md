@@ -215,3 +215,16 @@ module.exports = {
   ],
 };
 ```
+
+## Prettier
+
+```js
+{
+  "printWidth": 85,
+  "arrowParens": "always",
+  "endOfLine": "auto",
+  "tabWidth": 2,
+  "jsxSingleQuote": true,
+  "singleQuote": true
+}
+```
