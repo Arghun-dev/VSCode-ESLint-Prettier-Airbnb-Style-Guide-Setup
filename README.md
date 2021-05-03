@@ -12,7 +12,7 @@
 
 ## Install Prettier dependencies
 
-`$. npm install --save-dev @typescript-eslint/parser eslint-config-prettier eslint-plugin-prettier`
+`$. npm install --save-dev prettier @typescript-eslint/parser eslint-config-prettier eslint-plugin-prettier`
 
 <hr />
 
@@ -54,4 +54,16 @@ node_modules/
 build/
 dist/
 package-lock.json
+```
+
+<hr />
+
+## scripts
+
+```js
+"scripts": {
+    "lint": "eslint \"src/**/*.{ts, tsx}\"",
+    "prettier:fix": "prettier --write \"src/**/*.{ts, tsx}\"",
+    "prettier:check": "prettier \"src/**/*.{ts, tsx}\""
+}
 ```
