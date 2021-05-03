@@ -44,3 +44,14 @@ module.exports = {
     }
 }
 ```
+
+<hr />
+
+## eslintignore
+
+```js
+node_modules/
+build/
+dist/
+package-lock.json
+```
